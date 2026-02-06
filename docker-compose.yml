@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+        oscar_api:
+               build: ./app
+               ports:
+                - "8000:8000"
+               environment:
+                - FASTAPI_ENV=production
+               volumes:
+                - ./app:/app
+               restart: always
+
